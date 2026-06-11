@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>NCNI Massage Chair Support View</title>
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <div class="app-orientation-overlay" role="status" aria-live="polite">
+    <div class="app-orientation-card">
+      <strong>Rotate device to landscape</strong>
+      <span>The chair panel is designed for landscape use.</span>
+    </div>
+  </div>
+
+  <main class="root-shell">
+    <section class="display-panel">
+      <header class="panel-head">
+        <div>
+          <p class="eyebrow">NCNI support</p>
+          <h1>Chair Support View</h1>
+        </div>
+        <div class="head-actions">
+          <a class="ghost-link" href="/network">LAN</a>
+          <a class="ghost-link" href="/debug">Debug</a>
+          <button class="power" type="button" data-command="power" aria-label="Power">
+            <span class="power-ring"></span>
+            <span class="power-line"></span>
+          </button>
+        </div>
+      </header>
+
+      <div class="display-frame display-frame--root">
+        <div id="svgMount" class="svg-mount" aria-label="Chair display"></div>
+      </div>
+
+      <section class="hero-status">
+        <article class="hero-card">
+          <span class="status-label">Serial</span>
+          <strong id="serialStatus">Connecting...</strong>
+        </article>
+        <article class="hero-card">
+          <span class="status-label">Mode</span>
+          <strong id="modeStatus">OFF</strong>
+        </article>
+        <article class="hero-card">
+          <span class="status-label">Timer</span>
+          <strong id="timeStatus">--</strong>
+          <small id="timeSource">model</small>
+        </article>
+        <article class="hero-card">
+          <span class="status-label">Intensity</span>
+          <strong id="intensityStatus">--</strong>
+        </article>
+        <article class="hero-card">
+          <span class="status-label">Speed</span>
+          <strong id="speedStatus">--</strong>
+        </article>
+        <article class="hero-card">
+          <span class="status-label">Foot Speed</span>
+          <strong id="footSpeedStatus">--</strong>
+        </article>
+      </section>
+
+      <section class="status-strip status-strip--root">
+        <div class="status-card">
+          <span class="status-label">Board Feed</span>
+          <strong id="syncStatus">Waiting</strong>
+        </div>
+        <div class="status-card">
+          <span class="status-label">Frame</span>
+          <strong id="frameStatus">No frame</strong>
+        </div>
+        <div class="status-card">
+          <span class="status-label">Bytes</span>
+          <strong id="byteDump">Byte 3..6: -- -- -- --</strong>
+        </div>
+      </section>
+    </section>
+
+    <section class="controls-panel controls-panel--root">
+      <div class="controls-grid" id="controlsGrid">
+        <button class="cmd-btn" data-command="ramiona">Ramiona</button>
+        <button class="cmd-btn" data-command="przedramiona">Przedramiona</button>
+        <button class="cmd-btn" data-command="nogi">Nogi</button>
+        <button class="cmd-btn" data-command="sila_nacisku_plus">Siła nacisku +</button>
+        <button class="cmd-btn" data-command="sila_nacisku_minus">Siła nacisku -</button>
+        <button class="cmd-btn" data-command="masaz_posladkow">Masaż pośladków</button>
+        <button class="cmd-btn" data-command="szyja">Szyja</button>
+        <button class="cmd-btn" data-command="do_przodu_do_tylu_1">Do przodu / Do tyłu 1</button>
+        <button class="cmd-btn" data-command="plecy_i_talia">Plecy i talia</button>
+        <button class="cmd-btn" data-command="do_przodu_do_tylu_2">Do przodu / Do tyłu 2</button>
+        <button class="cmd-btn" data-command="predkosc_plus">Prędkość +</button>
+        <button class="cmd-btn" data-command="predkosc_minus">Prędkość -</button>
+        <button class="cmd-btn" data-command="masaz_stop">Masaż stóp</button>
+        <button class="cmd-btn" data-command="pauza">Pauza</button>
+        <button class="cmd-btn" data-command="czas">Czas</button>
+        <button class="cmd-btn" data-command="grawitacja_zero">Grawitacja zero</button>
+        <button class="cmd-btn" data-command="oparcie_w_gore">Oparcie w górę</button>
+        <button class="cmd-btn" data-command="predkosc_masazu_stop">Prędkość masażu stóp</button>
+        <button class="cmd-btn" data-command="ogrzewanie">Ogrzewanie</button>
+        <button class="cmd-btn" data-command="masaz_calego_ciala">Masaż całego ciała</button>
+        <button class="cmd-btn" data-command="tryb_automatyczny">Tryb automatyczny</button>
+        <button class="cmd-btn" data-command="oparcie_w_dol">Oparcie w dół</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>
